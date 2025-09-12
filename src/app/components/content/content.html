@@ -1,0 +1,90 @@
+<div style="background-color: #fefefe">
+  <app-live-webinar webinarType="Live Webinars" [webinarData]="liveWebinarData1"></app-live-webinar>
+</div>
+
+<div style="background-color: #fefefe">
+  <app-live-webinar
+    webinarType="Upcoming Webinars"
+    [webinarData]="liveWebinarData1"
+  ></app-live-webinar>
+</div>
+
+<div>
+  <app-continue-card></app-continue-card>
+</div>
+
+<div style="background-color: #fefefe">
+  <app-live-webinar
+    webinarType="Webinars based on cardiology"
+    [webinarData]="liveWebinarData1"
+  ></app-live-webinar>
+</div>
+
+<div class="col-12">
+  <app-top-speakers></app-top-speakers>
+</div>
+
+<div class="mt-5">
+  <div>
+    <h5>Browse by topic</h5>
+  </div>
+  <div class="col-12 pills-container">
+    <div class="row">
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Cardiologist (4)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Emergency (2)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >General Medicine (9)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >General Medicine (9)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Emergency Medicine (4)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Cardiologist (4)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Emergency (2)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >General Medicine (9)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >General Medicine (9)</span
+      >
+      <span
+        class="badge rounded-pill text-bg-light d-inline-flex align-items-center justify-content-center"
+        >Emergency Medicine (4)</span
+      >
+    </div>
+  </div>
+</div>
+
+<div class="col-12 mt-5">
+  <app-main></app-main>
+</div>
+
+<div class="align-items-center mb-3 mb-6">
+  <div class="col-12">
+    <h4 class="m-0">Webinar</h4>
+  </div>
+  <div class="col-12 text-md-end mt-2 mt-md-0">
+    <app-tabs (tabChange)="onTabChange($event)"></app-tabs>
+  </div>
+</div>
+
+<div style="height: 100px"></div>

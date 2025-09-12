@@ -1,0 +1,53 @@
+<div class="card" style="width: 100%; height: 100%">
+  <img [src]="webinar.imagePath" class="card-img-top" alt="1.png" />
+
+  <div class="px-3 pt-2">
+    <div
+      class="badge text-dark border px-2 d-inline-flex align-items-center"
+      style="background-color: #fcebd8"
+    >
+      <img src="images/icons_star.png" width="16" height="16" alt="star" class="me-1" />
+      {{ webinar.credits }} Credits
+      <span class="text-muted fw-semibold"> &nbsp; ({{ remTime }})</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <h6 class="card-title">{{ webinar.title }}</h6>
+
+    <div class="d-flex align-items-start gap-2 flex-grow-1">
+      <img [src]="webinar.orgLogoPath" width="30" height="30" alt="logo" class="rounded-circle" />
+      <div>
+        <div class="fs-16">By {{ webinar.organisation }}</div>
+      </div>
+    </div>
+
+    <!-- Key Highlights -->
+    <div
+      class="card my-3 border-top border-warning-subtle px-3 py-2"
+      style="background-color: #f4ede8"
+    >
+      <div class="text-uppercase small text-muted">Key Highlights</div>
+      <div class="text-dark small">{{ webinar.highlights }}</div>
+    </div>
+
+    @if(webinar.type == "live"){
+    <a href="#" class="btn btn-dark w-100">Watch Now</a>
+    }
+  </div>
+
+  @if(webinar.type == "upcoming"){
+
+  <div class="upcardbtm d-flex m-0 py-2 px-3">
+    <div class="col-7">
+      <p style="font-weight: 500; font-size: 16px; color: #737171">Goes live on</p>
+      <h6>{{ webinar.liveDate | date : ' d MMM yyyy, HH:MM a' }}</h6>
+    </div>
+    <div class="col-5 d-flex justify-content-center align-items-center">
+      <button class="btn btn-dark">
+        <i class="bi bi-bell-fill"></i> &nbsp;<span>Notify me</span>
+      </button>
+    </div>
+  </div>
+  }
+</div>

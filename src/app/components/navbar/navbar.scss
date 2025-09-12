@@ -1,0 +1,124 @@
+/* --- Search bar --- */
+.search-bar {
+  max-width: 400px; // smaller size on desktop
+  flex-grow: 0; // don’t stretch too much
+}
+
+/* --- Action bar --- */
+.action_bar {
+  display: flex;
+  align-items: center;
+  gap: 2rem; // reduced gap between icons
+
+  .action_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+
+    span {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      display: block;
+      text-align: center;
+      position: relative;
+    }
+
+    .action_name {
+      font-size: 12px;
+    }
+  }
+  .action_container:hover {
+    border-bottom-color: black;
+  }
+}
+
+/* --- Post badge --- */
+.post-badge {
+  font-size: 1rem; // larger text inside badge
+  padding: 0.6rem 1rem; // increase badge size
+}
+
+.post-badge i {
+  font-size: 1.2rem; // bigger plus icon
+  vertical-align: middle;
+}
+
+/* --- Mobile view --- */
+@media (max-width: 991px) {
+  .action_bar {
+    display: none !important; // hide icons
+  }
+
+  form.d-lg-none {
+    display: flex !important; // show mobile search bar
+  }
+
+  .post-badge {
+    font-size: 0.9rem; // slightly smaller on mobile
+    padding: 0.5rem 0.8rem;
+  }
+}
+
+.action_name_over {
+  position: absolute;
+  top: 50%; // move to vertical center
+  left: 50%; // move to horizontal center
+  transform: translate(-50%, -50%); // perfectly center
+  font-size: 0.7rem; // smaller so it fits
+  pointer-events: none; // text won’t block clicks
+}
+
+.navbar .post-badge {
+  margin-left: 2rem; /* pushes it away from notification */
+}
+
+.avatar-container {
+  display: inline-block;
+  position: relative;
+}
+
+.avatar-check {
+  position: absolute;
+  bottom: -2px; /* slightly outside avatar */
+  right: -2px; /* align to corner */
+  font-size: 0.9rem; /* adjust size relative to avatar */
+  color: #28a745; /* green check */
+  background: white; /* little white background so it’s visible */
+  border-radius: 50%;
+}
+
+input:active {
+  border-color: none;
+}
+
+.form-control:focus {
+  box-shadow: none; /* removes blue glow */
+  outline: none; /* removes default browser outline */
+  border-color: rgb(221, 222, 226); /* keeps the same border color as normal */
+}
+
+
+.navbar {
+  .container {
+    height: 72px; /* match navbar height */
+    display: flex;
+    align-items: center; /* vertical center */
+  }
+  form {
+    display: flex;
+    align-items: center; /* centers search input + button */
+  }
+  .action_bar {
+    display: flex;
+    align-items: center; /* centers icons */
+  }
+}
