@@ -14,6 +14,6 @@ export class ContinueCard implements OnInit {
   ngOnInit() {
     this.webinars  = continueData;
 
-    console.log('this.webinars = ', this.webinars);
+    // console.log('this.webinars = ', this.webinars);
   }
 }

@@ -20,6 +20,6 @@ export class Card implements OnInit {
 
   ngOnInit(): void {
     this.remTime = this.commonService.getTimeDifference(this.currentDate, this.webinar.creditsExpiry );
-    console.log('remTime = ', this.remTime);
+    // console.log('remTime = ', this.remTime);
   }
 }
