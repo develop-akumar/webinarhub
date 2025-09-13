@@ -1,3 +1,13 @@
+<div class="align-items-center mb-3 mb-6">
+  <div class="col-12">
+    <h4 class="m-0">Webinar</h4>
+  </div>
+  <div class="col-12 text-md-end mt-2 mt-md-0">
+    <app-tabs (tabChange)="onTabChange($event)"></app-tabs>
+  </div>
+</div>
+
+
 <div style="background-color: #fefefe">
   <app-live-webinar webinarType="Live Webinars" [webinarData]="liveWebinarData1"></app-live-webinar>
 </div>
